@@ -18,8 +18,8 @@ export const PokemonPage = () => {
   } = usePokemonPage()
 
   return (
-    <div className='flex justify-center items-center flex-col pt-3'>
-      <div className='flex flex-row justify-between w-1/2 mt-4 max-md:flex-col max-md:items-center max-md:w-full max-md:px-4'>
+    <div className='flex justify-center items-center flex-col pt-3 mt-4'>
+      <div className='flex flex-row justify-between w-1/2 max-md:flex-col max-md:items-center max-md:w-full max-md:px-4'>
         <TextField
           id='pokemon-name'
           type='text'
