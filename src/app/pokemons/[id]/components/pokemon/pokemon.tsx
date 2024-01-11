@@ -32,10 +32,10 @@ export const Pokemon = (props: PokemonProps) => {
   return (
     <div className='flex justify-center flex-col'>
       <Stack direction='row' spacing={1} mb={4} alignItems='center' justifyContent='center'>
-        <Typography align='center' variant='h3'>{capitalizeCase(replaceCharacter(data.name, '-', ' '))}</Typography>
-        <Typography className='text-slate-400' align='center' variant='h3' fontStyle='italic'>#{leftFillNumber(data.id, 4)}</Typography>
+        <Typography align='center' className='text-4xl max-md:text-2xl'>{capitalizeCase(replaceCharacter(data.name, '-', ' '))}</Typography>
+        <Typography className='text-slate-400 text-4xl max-md:text-2xl' align='center' fontStyle='italic'>#{leftFillNumber(data.id, 4)}</Typography>
       </Stack>
-      <div className='grid grid-cols-2'>
+      <div className='grid grid-cols-2 max-lg:grid-cols-1'>
         <div className='flex justify-center items-center'>
           <Image
             src={imageUrl}
@@ -45,7 +45,7 @@ export const Pokemon = (props: PokemonProps) => {
           />
         </div>
         <div>
-          <div className='grid grid-cols-3 bg-slate-50 p-4 rounded-md border border-slate-400'>
+          <Stack spacing={{ xs: 1, sm: 2 }} direction='row' useFlexGap flexWrap='wrap' >
             <Attribute label='Height' value={`${data.height/10} m`} />
             <Attribute label='Weight' value={`${data.weight/10} Kg`} />
             {
@@ -56,7 +56,7 @@ export const Pokemon = (props: PokemonProps) => {
                   value={base_stat}
                 />)
             }
-          </div>
+          </Stack>
           <Stack direction='row' spacing={2} alignItems='center' my={4}>
             <Typography variant='h6'>Type</Typography>
             <Stack direction='row' spacing={1} alignItems='center' divider={<Divider orientation='vertical' flexItem />}>
