@@ -32,8 +32,8 @@ export const Pokemon = (props: PokemonProps) => {
   return (
     <div className='flex justify-center flex-col'>
       <Stack direction='row' spacing={1} mb={4} alignItems='center' justifyContent='center'>
-        <Typography align='center' className='text-4xl max-md:text-2xl'>{capitalizeCase(replaceCharacter(data.name, '-', ' '))}</Typography>
-        <Typography className='text-slate-400 text-4xl max-md:text-2xl' align='center' fontStyle='italic'>#{leftFillNumber(data.id, 4)}</Typography>
+        <Typography align='center' className='!text-4xl max-md:!text-2xl'>{capitalizeCase(replaceCharacter(data.name, '-', ' '))}</Typography>
+        <Typography className='text-slate-400 !text-4xl max-md:!text-2xl' align='center' fontStyle='italic'>#{leftFillNumber(data.id, 4)}</Typography>
       </Stack>
       <div className='grid grid-cols-2 max-lg:grid-cols-1'>
         <div className='flex justify-center items-center'>
