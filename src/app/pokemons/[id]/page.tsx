@@ -26,8 +26,8 @@ export default function Page({ params }: { params: { id: string }}) {
   }
   
   return (
-    <div className='flex justify-center items-center flex-col pt-3 mt-4'>
-      <div className='w-4/5'>
+    <div className='flex justify-center items-center flex-col pt-3 mt-4 max-md:px-4'>
+      <div className='md:w-4/5 w-full'>
         <div className='flex flex-row justify-between mb-4'>
           <Tooltip title='Previous Pokemon'>
             <IconButton size='large' color='primary' onClick={previousPokemonEvent} disabled={parseInt(params.id) <= 1}>
